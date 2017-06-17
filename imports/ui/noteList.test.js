@@ -22,6 +22,6 @@ if (Meteor.isClient){
             
             expect(wrapper.find('NoteListItem').length).toBe(0);
             expect(wrapper.find('NoteListEmptyItem').length).toBe(1);
-        })
+        });
     });
 }
