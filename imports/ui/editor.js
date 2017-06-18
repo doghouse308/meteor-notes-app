@@ -30,11 +30,11 @@ export class Editor extends React.Component {
         this.props.browserHistory.push('/dashboard');
     }
     componentDidUpdate(prevProps, prevState) {
-        const currentNoteId = this.props.note ?this.props.note._id : undefined;
+        const currentNoteId = this.props.note ? this.props.note._id : undefined;
         const prevNoteId = prevProps.notes ? prevProps.note._id : undefined;
 
         if (currentNoteId && currentNoteId != prevNoteId) {
-            this.setState ({
+            this.setState({
                 title: this.props.note.title,
                 body: this.props.note.body
             })
@@ -46,7 +46,7 @@ export class Editor extends React.Component {
 
         if (this.props.note) {
             return (
-                <div>
+                <div className="editor">
                     <input value={this.state.title} placeholder="Note Title" onChange={this.updateTitle.bind(this)} />
                     <textarea value={this.state.body} placeholder="Note Body" onChange={this.updateBody.bind(this)} />
                     <button onClick={this.removeNote.bind(this)}>Delete Note</button>
@@ -54,9 +54,12 @@ export class Editor extends React.Component {
             );
         } else {
             return (
-                <p>
-                    {this.props.selectedNoteId ? 'Note Not Found' : 'Select or create a note to edit'}
-                </p>
+                <div className="editor">
+                    <p>
+                        {this.props.selectedNoteId ? 'Note Not Found' : 'Select or create a note to edit'}
+                    </p>
+                </div>
+
             );
         }
     }
