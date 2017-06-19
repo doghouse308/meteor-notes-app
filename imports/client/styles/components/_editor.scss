@@ -17,6 +17,8 @@
 }
 
 .editor__body{
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
     font-weight: 300;
     margin-bottom: $large-space;

@@ -2,9 +2,7 @@ import React from 'react';
 
 const NoteListEmptyItem = () => {
     return (
-        <div>
-            <p>No Current Notes</p>
-        </div>
+        <p className="empty-item">No Current Notes</p>
     )
 };
 
