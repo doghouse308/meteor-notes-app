@@ -5,7 +5,7 @@ This is a notes application built on meteor
 App developed by Andrew Mead for Udemy Course
 Student:  Paul Peterson
 
-##Getting Started
+## Getting Started
 This app requires you to have meteor installed on your machine.  Then you can clone 
 the repo and run the following:
 
