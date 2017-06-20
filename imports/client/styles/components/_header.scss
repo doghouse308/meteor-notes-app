@@ -21,8 +21,10 @@
     cursor: pointer;
     height: 2rem;
     width: 2rem;
+
+    @include desktop{
+        display: none;
+    }
 }
 
-@include desktop{
-    display: none;
-}
+
